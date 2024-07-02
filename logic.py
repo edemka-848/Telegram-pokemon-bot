@@ -10,7 +10,8 @@ class Pokemon:
         self.pokemon_number = randint(1,1000)
         self.img = self.get_img()
         self.name = self.get_name()
-
+        self.hp  = randint(1,1000)
+        self.power = randint(1,1000)
         Pokemon.pokemons[pokemon_trainer] = self
 
     # Метод для получения картинки покемона через API
@@ -37,7 +38,18 @@ class Pokemon:
     # Метод класса для получения информации
     def info(self):
         return f"Имя твоего покеомона: {self.name}"
+        return f"Здоровье твоего покеомона: {self.hp}"
+        return f"Сила твоего покеомона: {self.power}"
 
-    # Метод класса для получения картинки покемона
-    def show_img(self):
-        return self.img
+
+def attack(self, enemy):
+    if enemy.hp > self.power:
+        enemy.hp -= self.power
+        return f"Сражение @{self.pokemon_trainer} с @{enemy.pokemon_trainer}"
+    else:
+        enemy.hp = 0
+        return f"Победа @{self.pokemon_trainer} над @{enemy.pokemon_trainer}! "
+    
+
+def show_img(self):
+    return self.img
