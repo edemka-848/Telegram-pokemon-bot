@@ -1,1 +1,1 @@
-token = '6466178389:AAHZFBGaQUXc365MVIMUpX2qMWJtd3NKBck'
+token = 'secret'
